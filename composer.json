@@ -1,0 +1,17 @@
+{
+    "name": "selftermination/sprinkle",
+    "type": "userfrosting-sprinkle",
+    "description": "Mini-sprinkle to add self-deletion functionality for users.",
+    "license" : "none",
+    "authors" : [
+	  {
+		"name": "Strike & Co.",
+            "homepage": "(none)"
+	  }
+    ],
+    "autoload": {
+        "psr-4": {
+            "UserFrosting\\Sprinkle\\Selftermination\\": "src/"
+        }
+    }
+}
