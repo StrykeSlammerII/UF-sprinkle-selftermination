@@ -8,39 +8,3 @@
     <div id="self-termination" class="box-footer text-center">
 	  <a href="#" class="js-user-delete">{{translate('DELETE')}}</a>
     </div>
-
-    {#  original: [from Admin sprinkle, pages/user.html.twig]
-	  {% if 'delete' not in tools.hidden %}
-		<li>
-		    <a href="#" class="js-user-delete" data-user_name="{{user.user_name}}">
-			  <i class="fas fa-trash-alt fa-fw"></i> {{translate('DELETE')}}
-		    </a>
-		</li>
-	  {% endif %}
-    ...
-	  {% block scripts_page %}
-		<!-- Include page variables -->
-		<script>
-		{% include "pages/partials/page.js.twig" %}
-
-		// Add user name
-		page = $.extend(
-		    true, // deep extend
-		    {
-			  user_name: "{{user.user_name}}",
-			  delete_redirect: "{{delete_redirect}}"
-		    },
-		    page
-		);
-		</script>
-
-		<!-- Include form widgets JS -->
-		{{ assets.js('js/form-widgets') | raw }}
-
-		<!-- Include page-specific JS -->
-		{{ assets.js('js/pages/user') | raw }}
-	  {% endblock %}
-	  [ no <form>s here, all just <div>s ]
-	  js/pages/user -> bindUserButtons($("#view-user"), { delete_redirect: page.delete_redirect });
-    
-    #}

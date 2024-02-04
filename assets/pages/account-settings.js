@@ -1,6 +1,6 @@
 /*
  * modified from 'admin' sprinkle -> widgets/users.js and pages/user.js
- * we're not using any AJAX here, so what should we put in the ajaxPArams below? :(
+ * we're not using any AJAX here, so what should we put in the ajaxParams below? :(
  */
 
 $(document).ready(function() {
