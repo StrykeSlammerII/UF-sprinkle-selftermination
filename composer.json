@@ -1,17 +1,50 @@
 {
     "name": "selftermination/sprinkle",
     "type": "userfrosting-sprinkle",
-    "description": "Mini-sprinkle to add self-deletion functionality for users.",
-    "license" : "none",
+   "description": "A UserFrosting sprinkle providing 1) redaction of basic user personal data during account deletion 2) a button to delete user's own account",
+    "keywords": ["account management", "redaction", "user management"],
+    "homepage": "https://github.com/StrykeSlammerII/UF-sprinkle-selftermination",
+    "license" : "unlicense",
     "authors" : [
-	  {
-		"name": "Strike & Co.",
-            "homepage": "(none)"
-	  }
+        {
+            "name": "StrykeSlammerII",
+            "homepage": "https://github.com/StrykeSlammerII"
+        }
     ],
+    "require": {
+        "php": "^8.0",
+        "ext-gd": "*",
+        "userfrosting/framework": "^5.0",
+        "userfrosting/sprinkle-core": "^5.0",
+        "userfrosting/sprinkle-account": "^5.0",
+        "userfrosting/sprinkle-admin": "^5.0",
+        "userfrosting/theme-adminlte": "^5.0"
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^3.0",
+        "phpstan/phpstan": "^1.1",
+        "phpstan/phpstan-deprecation-rules": "^1.0",
+        "phpstan/phpstan-mockery": "^1.0",
+        "phpstan/phpstan-phpunit": "^1.0",
+        "phpstan/phpstan-strict-rules": "^1.0",
+        "phpunit/phpunit": "^9.5",
+        "mockery/mockery": "^1.2",
+        "league/factory-muffin": "^3.0",
+        "league/factory-muffin-faker": "^2.0"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
     "autoload": {
         "psr-4": {
-            "UserFrosting\\Sprinkle\\Selftermination\\": "src/"
+            "SelfTermination\\Sprinkle\\": "app/src"
         }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "SelfTermination\\Tests\\App\\": "app/tests/"
+        }
+    },
+    "scripts": {
+        "post-create-project-cmd" : "php bakery bake"
     }
 }
