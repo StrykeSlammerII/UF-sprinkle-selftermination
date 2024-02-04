@@ -1,29 +1,21 @@
 <?php
 
-/*
- * UserFrosting (http://www.userfrosting.com)
- *
- * @link      https://github.com/userfrosting/UserFrosting
- * @copyright Copyright (c) 2019 Alexander Weissman
- * @license   https://github.com/userfrosting/UserFrosting/blob/master/LICENSE.md (MIT License)
- */
-
-namespace UserFrosting\Sprinkle\Selftermination\Database\Seeds;
+namespace SelfTermination\Sprinkle\Database\Seeds;
 
 use UserFrosting\Sprinkle\Account\Database\Models\Permission;
 //use UserFrosting\Sprinkle\Account\Database\Models\Role;
-use UserFrosting\Sprinkle\Core\Database\Seeder\BaseSeed;
-//use UserFrosting\Sprinkle\Core\Facades\Seeder;
+use UserFrosting\Sprinkle\Core\Seeder\SeedInterface;
+
 
 /**
  * Seeder for the default permissions.
  */
-class SelfTerminationPermission extends BaseSeed
+class SelfTerminationPermission implements SeedInterface
 {
     /**
      * {@inheritdoc}
      */
-    public function run()
+    public function run():void
     {
         // Get and save permissions
         $permissions = $this->getPermissions();
@@ -53,16 +45,12 @@ class SelfTerminationPermission extends BaseSeed
      */
     protected function savePermissions(array &$permissions)
     {
-        foreach ($permissions as $slug => $permission) {
-
-            // Trying to find if the permission already exist
-            $existingPermission = Permission::where(['slug' => $permission->slug, 'conditions' => $permission->conditions])->first();
-
-            // Don't save if already exist, use existing permission reference
-            if ($existingPermission == null) {
+        foreach ($permissions as $id => $permission) {
+            $slug = $permission->slug;
+            $conditions = $permission->conditions;
+            // Skip if a permission with the same slug and conditions has already been added
+            if (!Permission::where('slug', $slug)->where('conditions', $conditions)->first()) {
                 $permission->save();
-            } else {
-                $permissions[$slug] = $existingPermission;
             }
         }
     }
