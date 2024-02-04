@@ -1,5 +1,5 @@
 {
-    "name": "selftermination/sprinkle",
+    "name": "StrykeSlammerII/selftermination-sprinkle",
     "type": "userfrosting-sprinkle",
    "description": "A UserFrosting sprinkle providing 1) redaction of basic user personal data during account deletion 2) a button to delete user's own account",
     "keywords": ["account management", "redaction", "user management"],
