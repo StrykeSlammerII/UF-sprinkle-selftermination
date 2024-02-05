@@ -36,7 +36,7 @@
     "prefer-stable": true,
     "autoload": {
         "psr-4": {
-            "SelfTermination\\Sprinkle\\": "app/src"
+            "SelfTermination\\Sprinkle\\": "app/src/"
         }
     },
     "autoload-dev": {
