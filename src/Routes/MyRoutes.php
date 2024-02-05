@@ -21,11 +21,13 @@ class MyRoutes implements RouteDefinitionInterface
     // new routes only; route override is handled via DI service
     public function register(App $app): void
     {
+/*
 	  // 4 base routes for the skeleton:
 	  $app->get('/', [AppController::class, 'pageIndex'])->setName('index');
 	  $app->get('/about', [AppController::class, 'pageAbout'])->setName('about');
         $app->get('/legal', [AppController::class, 'pageLegal'])->setName('legal');
         $app->get('/privacy', [AppController::class, 'pagePrivacy'])->setName('privacy');
+*/
 
     // from the user's self-termination form.
 	  $app->delete('/selftermination', SelfTerminationAction::class)
