@@ -1,9 +1,5 @@
 <?php
 
-/*
- * Code is fully owned and copyrighted Strike & Co. Keep your fingers off my stuff.
- */
-
 namespace UserFrosting\Sprinkle\Selftermination\Controller;
 
 //use Carbon\Carbon;
