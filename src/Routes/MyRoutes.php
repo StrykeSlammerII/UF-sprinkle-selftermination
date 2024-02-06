@@ -18,7 +18,6 @@ use SelfTermination\Sprinkle\Controller\User\ConfirmTerminationAction;
 
 class MyRoutes implements RouteDefinitionInterface
 {
-    // new routes only; route override is handled via DI service
     public function register(App $app): void
     {
 /*
@@ -37,7 +36,8 @@ class MyRoutes implements RouteDefinitionInterface
 	  $app->group('/modals/users', function (RouteCollectorProxy $group) {
 		$group->get('/confirm-termination', ConfirmTerminationAction::class);
 	  })->add(AuthGuard::class)->add(NoCache::class);
-	  
+
+/*
     // overwrite DELETE api/users/u/{user_name}
 	  $app->group('/api/users', function (RouteCollectorProxy $group) {
             $group->delete('/u/{user_name}', UserRedactAction::class)
@@ -46,4 +46,5 @@ class MyRoutes implements RouteDefinitionInterface
 	  })->add(AuthGuard::class)->add(NoCache::class);
 
     }
+*/
 }
