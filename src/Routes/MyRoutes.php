@@ -44,7 +44,6 @@ class MyRoutes implements RouteDefinitionInterface
                   ->add(UserInjector::class)
                   ->setName('api.users.delete');
 	  })->add(AuthGuard::class)->add(NoCache::class);
-
-    }
 */
+    }
 }
