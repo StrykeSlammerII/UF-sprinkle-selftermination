@@ -4,7 +4,7 @@ This UserFrosting sprinkle does two things:
 2) Provides a button for each user to delete their own account.
 
 # Install directions
-* Include `SelfTermination::class` in your Sprinkle Recipe:
+## Include `SelfTermination::class` in your Sprinkle Recipe:
 ```php
   use SelfTermination\Sprinkle\SelfTermination;
   ...
@@ -19,14 +19,14 @@ This UserFrosting sprinkle does two things:
         ];
     }
 ```
-* Include `strykeslammerii/selftermination-sprinkle` in `composer.json`
+## Include `strykeslammerii/selftermination-sprinkle` in `composer.json`
 ```json
     "require": {
         ...
 	  "strykeslammerii/selftermination-sprinkle": "^dev-main"
     },
 ```
-* Include `strykeslammerii/selftermination-sprinkle` in `package.json`
+## Include `strykeslammerii/selftermination-sprinkle` in `package.json`
 ```json
     "dependencies": {
         "@userfrosting/sprinkle-admin": "^5.0",
@@ -34,8 +34,8 @@ This UserFrosting sprinkle does two things:
 	       "@strykeslammerii/selftermination-sprinkle": "^dev-main"
     },
 ```
-* Install `` seed
-** First, in Bakery
+## Install `SelfTermination\Sprinkle\Database\Seeds\SelfTerminationPermission` seed
+### First, in Bakery
 ```txt
 $ php bakery seed
 Seeder
@@ -47,7 +47,7 @@ Seeder
   [3] SelfTermination\Sprinkle\Database\Seeds\SelfTerminationPermission
  > 3
 ```
-** Then, add to appropriate roles through UF's user management UI
+### Then, add to appropriate roles through UF's user management UI
 
 # In more detail
 ## Redacts Personal Data
