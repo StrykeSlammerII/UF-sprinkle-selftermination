@@ -9,18 +9,7 @@ use UserFrosting\Sprinkle\Admin\Controller\User\UserDeleteModal;
 
 // code is the same as UserDeleteModal, just point it at a different page
 // and use the self_termination permission slug
-/**
- * Renders the modal form to confirm user deletion.
- *
- * This does NOT render a complete page.  Instead, it renders the HTML for the modal, which can be embedded in other pages.
- * This page requires authentication.
- * Request type: GET
- *
- * @throws ValidationException
- * @throws AccountNotFoundException If user is not found
- * @throws ForbiddenException       If user is not authorized to access page
- * @throws AccountException         If trying to delete the master account
- */
+// and authenticate vs self; $user will be empty
 class ConfirmTerminationAction extends UserDeleteModal {
     
     /** @var string Page template */
@@ -33,7 +22,7 @@ class ConfirmTerminationAction extends UserDeleteModal {
      */
     protected function validateAccess(UserInterface $user): void
     {
-        if (!$this->authenticator->checkAccess('self_termination', ['user' => $user])) {
+        if (!$this->authenticator->checkAccess('self_termination', ['user' => $this->authenticator->user()])) {
             throw new ForbiddenException();
         }
     }
