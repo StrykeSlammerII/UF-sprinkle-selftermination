@@ -1,27 +1,16 @@
-{% extends forcedLayout ? forcedLayout  : "pages/abstract/default.html.twig" %}
-
-{% set page_active = "account-settings" %}
-
-{# Overrides blocks in head of base template #}
-{% block page_title %}{{translate("ACCOUNT.SETTINGS")}}{% endblock %}
-
-{% block page_description %}{{translate("ACCOUNT.SETTINGS.DESCRIPTION")}}{% endblock %}
+{% extends "@adminlte-theme/pages/account-settings.html.twig" %}
 
 {% block body_matter %}
-
+    Account-settings
     <div class="row">
         <div class="col-lg-6">
             {% block settings_profile_box %}
-                <div class="box box-primary">
-                    {% include "forms/settings-profile.html.twig" %}
-                </div>
+                {{  parent() }}
             {% endblock %}
         </div>
         <div class="col-lg-6">
             {% block settings_account_box %}
-                <div class="box box-primary">
-                    {% include "forms/settings-account.html.twig" %}
-                </div>
+	    	{{  parent() }}
             {% endblock %}
         </div>
 	  <div class="col-lg-12">
@@ -35,5 +24,6 @@
 {% endblock %}
 
 {% block scripts_page %}
-{{ encore_entry_script_tags('SelfTerminate.page.account-settings') }}
+    {{ parent() }}
+    {{ encore_entry_script_tags('SelfTerminate.page.account-settings') }}
 {% endblock %}
