@@ -2,7 +2,7 @@
 
 namespace SelfTermination\Sprinkle\Controller\User;
 
-use UserFrosting\Support\Exception\ForbiddenException;
+use UserFrosting\Sprinkle\Account\Exceptions\ForbiddenException;
 use UserFrosting\Sprinkle\Account\Database\Models\Interfaces\UserInterface;
 use UserFrosting\Sprinkle\Admin\Controller\User\UserDeleteModal;
 
