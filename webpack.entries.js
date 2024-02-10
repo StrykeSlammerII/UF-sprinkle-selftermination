@@ -10,5 +10,5 @@
 
 module.exports = {
     app: "./app/assets/app.js",
-    'SelfTerminate.page.account-settings': "./app/assets/account-settings.js",
+    'SelfTerminate.page.account-settings': "./app/assets/account-settings.js"
 };
