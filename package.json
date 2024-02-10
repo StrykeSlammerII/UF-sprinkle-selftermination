@@ -26,6 +26,6 @@
         "*.js",
         "*.json",
         "assets/*.js",
-        "assets/pages/*.js",
+        "assets/pages/*.js"
     ]
 }
