@@ -24,6 +24,8 @@
     },
     "files": [
         "*.js",
-        "*.json"
+        "*.json",
+        "assets/*.js",
+        "assets/pages/*.js",
     ]
 }
