@@ -23,7 +23,7 @@ This UserFrosting sprinkle does two things:
 ```json
     "require": {
         ...
-	  "strykeslammerii/selftermination-sprinkle": "^dev-main"
+	  "strykeslammerii/selftermination-sprinkle": "^0.2"
     },
 ```
 ## Include `strykeslammerii/selftermination-sprinkle` in `package.json`
@@ -31,9 +31,19 @@ This UserFrosting sprinkle does two things:
     "dependencies": {
         "@userfrosting/sprinkle-admin": "^5.0",
         "@userfrosting/theme-adminlte": "^5.0",
-	       "@strykeslammerii/selftermination-sprinkle": "^dev-main"
+	 "selftermination-sprinkle": "StrykeSlammerII/UF-sprinkle-selftermination"
     },
 ```
+## Include `'selftermination-sprinkle/webpack.entries'` in `webpack.config.js`
+```js
+const sprinkles = {
+    AdminLTE: require('@userfrosting/theme-adminlte/webpack.entries'),
+    Admin: require('@userfrosting/sprinkle-admin/webpack.entries'),
+    SelfTermination: require('selftermination-sprinkle/webpack.entries'),
+    App: require('./webpack.entries')
+}
+```
+
 ## Install `SelfTermination\Sprinkle\Database\Seeds\SelfTerminationPermission` seed
 ### First, in Bakery
 ```txt
