@@ -7,8 +7,9 @@
  * Each entry will result in one JavaScript file (e.g. app.js)
  * and one CSS file (e.g. app.css) if your JavaScript imports CSS.
  */
+const path = require('path');
 
 module.exports = {
 //    app: "./app/assets/app.js",
-    'SelfTerminate.page.account-settings': "./assets/account-settings.js"
+    'SelfTerminate.page.account-settings': path.resolve(__dirname, './assets/account-settings.js')
 };
