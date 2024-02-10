@@ -9,6 +9,6 @@
  */
 
 module.exports = {
-    app: "./app/assets/app.js",
-    'SelfTerminate.page.account-settings': "./app/assets/account-settings.js"
+//    app: "./app/assets/app.js",
+    'SelfTerminate.page.account-settings': "./assets/account-settings.js"
 };
