@@ -2,9 +2,7 @@
     "name": "selftermination-sprinkle",
     "homepage": "https://github.com/StrykeSlammerII/UF-sprinkle-selftermination",
     "license": "Unlicense",
-    "repository": {
-      "type" : "git",
-      "url" : "https://github.com/StrykeSlammerII/UF-sprinkle-selftermination"
+    "repository": "github:StrykeSlammerII/UF-sprinkle-selftermination"
     },
     "dependencies": {
         "sprinkle-admin": "github:userfrosting/sprinkle-admin",
