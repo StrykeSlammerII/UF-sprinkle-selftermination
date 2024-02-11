@@ -2,11 +2,10 @@
     "name": "selftermination-sprinkle",
     "homepage": "https://github.com/StrykeSlammerII/UF-sprinkle-selftermination",
     "license": "Unlicense",
-    "repository": "github:StrykeSlammerII/UF-sprinkle-selftermination"
-    },
+    "repository": "github:StrykeSlammerII/UF-sprinkle-selftermination",
     "dependencies": {
-        "sprinkle-admin": "github:userfrosting/sprinkle-admin",
-        "theme-adminlte": "github:userfrosting/theme-adminlte"
+        "@userfrosting/sprinkle-admin": "^5.0",
+        "@userfrosting/theme-adminlte": "^5.0"
     },
     "devDependencies": {
         "@symfony/webpack-encore": "^4.4.0",
