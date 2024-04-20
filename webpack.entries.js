@@ -11,5 +11,5 @@ const path = require('path');
 
 module.exports = {
 //    app: "./app/assets/app.js",
-    'SelfTerminate.page.account-settings': path.resolve(__dirname, './assets/account-settings.js')
+    'SelfTerminate.page.account-settings': path.resolve(__dirname, './app/assets/account-settings.js')
 };

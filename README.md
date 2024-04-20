@@ -23,14 +23,14 @@ This UserFrosting sprinkle does two things:
 ```json
     "require": {
         ...
-	  "strykeslammerii/selftermination-sprinkle": "^0.2"
+	  "strykeslammerii/selftermination-sprinkle": "^0.3"
     },
 ```
 ## Include `strykeslammerii/selftermination-sprinkle` in `package.json`
 ```json
     "dependencies": {
-        "@userfrosting/sprinkle-admin": "^5.0",
-        "@userfrosting/theme-adminlte": "^5.0",
+        "@userfrosting/sprinkle-admin": "~5.1.0",
+        "@userfrosting/theme-adminlte": "~5.1.0",
 	 "selftermination-sprinkle": "StrykeSlammerII/UF-sprinkle-selftermination"
     },
 ```

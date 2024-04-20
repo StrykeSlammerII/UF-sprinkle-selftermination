@@ -15,7 +15,7 @@ use UserFrosting\Sprinkle\Account\Database\Models\Interfaces\UserInterface;
 trait UserRedaction {
 
     #[\DI\Attribute\Inject]
-    protected \UserFrosting\Sprinkle\Core\Log\DebugLogger $logger;
+    protected \UserFrosting\Sprinkle\Core\Log\DebugLoggerInterface $logger;
     
     /// TODO:  This does not yet remove entry from role_users table.
     /// If there are only a few users of a given role, this may help narrow down which user was which.
