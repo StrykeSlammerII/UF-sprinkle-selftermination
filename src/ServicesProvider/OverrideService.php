@@ -5,7 +5,7 @@ namespace SelfTermination\Sprinkle\ServicesProvider;
 use UserFrosting\ServicesProvider\ServicesProviderInterface;
 
 use UserFrosting\Sprinkle\Admin\Controller\User\UserDeleteAction;
-use SelfTermination\Sprinkle\Controller\UserRedactAction;
+use SelfTermination\Sprinkle\Controller\User\UserRedactAction;
 //use UserFrosting\Sprinkle\Admin\Routes\UsersRoutes;
 //use SelfTermination\Sprinkle\Routes\OverrideRoutes;
 
