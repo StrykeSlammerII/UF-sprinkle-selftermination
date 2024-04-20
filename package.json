@@ -4,8 +4,8 @@
     "license": "Unlicense",
     "repository": "github:StrykeSlammerII/UF-sprinkle-selftermination",
     "dependencies": {
-        "@userfrosting/sprinkle-admin": "^5.1",
-        "@userfrosting/theme-adminlte": "^5.1"
+        "@userfrosting/sprinkle-admin": "~5.1.0",
+        "@userfrosting/theme-adminlte": "~5.1.0"
     },
     "devDependencies": {
         "@symfony/webpack-encore": "^4.4.0",
