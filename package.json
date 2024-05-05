@@ -1,5 +1,6 @@
 {
     "name": "selftermination-sprinkle",
+    "version" : "v0.3.0-p4",
     "homepage": "https://github.com/StrykeSlammerII/UF-sprinkle-selftermination",
     "license": "Unlicense",
     "repository": "github:StrykeSlammerII/UF-sprinkle-selftermination",
